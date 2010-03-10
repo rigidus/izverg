@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title> {head_title} </title>
+<script>
+function ShowHide(id)
+{
+	if (document.getElementById(id).style.display == 'none') {
+		document.getElementById(id).style.display = 'block';
+	} else {
+		document.getElementById(id).style.display = 'none';
+	}
+	return false;
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<link rel="stylesheet" type="text/css" href="/css/izverg.css" media="screen">
+<link rel="openid.server" href="http://gehirn.ru/phpMyID-0.7/MyID.config.php" />
+<link rel="openid.delegate" href="http://gehirn.ru/phpMyID-0.7/MyID.config.php" />
+</head><body>
+
+
+<table class="Top">
+	<tbody>
+		<tr class="TopMenu">
+			<td class="First"> +7 (911) 286-92-90 | Санкт-Петербург</td>
+			<td><a href="/rss"><img src="/img/rss20.jpg" border="0" /></a></td>
+			<!-- BEGIN TopMenuElt -->
+			<td><a href="{link}">{title_menu}</a></td>
+			<!-- END TopMenuElt -->
+			<td class="Last"><div></div></td>
+		</tr>
+	</tbody>
+</table>
+<table>	
+	<tbody>
+		<tr>
+			<td class="Main">
+				<table>
+					<tbody>
+						<tr class="SubTop">
+							<td class="Login">
+								<!-- BEGIN logon -->
+								<table>
+									<tr>
+										<td style="word-wrap: none;">
+											<span style="font-size: 140%; line-height: 10px">»</span>&nbsp;<a href="" onclick="javascript: ShowHide('login'); return false;">Войти</a>&nbsp;&nbsp;
+										</td>
+										<td align="right">
+											<span style="font-size: 140%; line-height: 10px">»</span>&nbsp;<a href="/newuser">Зарегистрироваться</a>
+										</td>
+										<td width="20%">
+											<div style="width: 10px">&nbsp;</div>
+										</td>
+									</tr>
+								</table>
+								<!-- END logon -->
+								<!-- BEGIN logout -->
+								<table>
+									<tr>
+										<td>
+											<span style="font-size: 140%; line-height: 10px">»</span>
+											<a href="/profile">{user_name}</a>
+										</td>
+										<td align="right">
+											<span style="font-size: 140%; line-height: 10px">»</span>
+											<a href="/logout">Выйти</a>
+										</td>
+										<td width="20%">
+											<div style="width: 10px">&nbsp;</div>
+										</td>
+									</tr>
+								</table>
+								<!-- END logout -->
+							</td>
+							<td class="BreadCrumbs">
+								{BreadCrumbs}
+							</td>
+						</tr>
+						<tr>
+							<td class="LeftMenu">
+								<table>
+									<tbody>
+										<tr>
+											<td>
+												<div id="login" class="LoginForm" style="display: none;">
+													<form method="post">
+														<input type="hidden" name="act" value="login">
+														<table>
+															<tr>
+																<td>login:</td>
+																<td><input type="text" name="login" value="" /></td>
+															</tr>
+															<tr>
+																<td>password:</td>
+																<td><input type="password" name="password" value="" /></td>
+															</tr>
+															<tr>
+																<td>&nbsp;</td>
+																<td><input type="submit" value="Вход" /></td>
+															</tr>
+														</table>
+													</form>
+												</div>
+											</td>
+										</tr>
+										<!-- BEGIN MainMenuElt -->
+											<tr><td><div style="margin-left: {level}px"><a href="{link}">{title}</a></div></td></tr>
+										<!-- END MainMenuElt -->
+									</tbody>
+								</table>
+							</td>
+							<td class="Content">							
+								<table>
+									<tbody>
+											<tr>
+												<td>
+													<!-- BEGIN ContentBlock -->
+													<h1>{title}</h1>
+													{content}
+													<!-- END ContentBlock -->
+												</td>
+											</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+			<td class="RightSpace" rowspan="2" valign="top">
+			
+				<div class="AdSense">
+				
+					<form action="/search">
+						<input type="text" name="q" value="{search_query}" style="width: 130px;">
+						<input 
+							type="submit" value="&nbsp;&nbsp;&nbsp;" 
+							onclick="if (s.words.value=='') return false;"
+							style="	background: url('/img/search_icon.jpg'); 
+									background-repeat: no-repeat;
+									border: 0;
+									width: 20px;
+									">
+					</form>
+				
+					<br />
+			
+<script type="text/javascript"><!--
+var google_ad_client = "pub-9123247748154969";
+var google_ad_width = 160;
+var google_ad_height = 600;
+var google_ad_format = "160x600_as";
+var google_ad_type = "text";
+var google_ad_channel = "";
+var google_color_border = "000000";
+var google_color_bg = "555555";
+var google_color_link = "ffffff";
+var google_color_text = "CCCCCC";
+var google_color_url = "ccccff";
+var google_ui_features = "rc:0";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-708088-4";
+urchinTracker();
+</script>
+
+{my_links}
+
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="height: 20px">
+				&nbsp;
+			</td>
+		</tr>
+	</tbody>
+</table>
+<div class="Navi">
+			<a href="/">
+				<img src="/img/home.gif" width="11" height="10" alt="На главную" title="На главную">
+			</a>
+			<a href="/sitemap/">
+				<img src="/img/sitemap.gif" alt="Карта сайта" title="Карта сайта" height="11" width="11">
+			</a>
+			<a href="/info/contacts/">
+				<img src="/img/message.gif" alt="Отправить сообщение" title="Отправить сообщение" height="8" width="12">
+			</a>
+</div>
+
+</body></html>

@@ -1,0 +1,17 @@
+RewriteEngine on
+
+RewriteBase /
+
+RewriteRule ^upload/ - [F]
+RewriteRule ^cache/ - [F]
+RewriteRule ^lib/ - [F]
+RewriteRule ^modules/ - [F]
+RewriteRule ^messages/ - [F]
+RewriteRule ^templates/ - [F]
+
+#RewriteRule ^photos/bigs/.* /water.php [L]
+#RewriteRule ^photos/normals/.* /water.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /index.php [L,QSA]

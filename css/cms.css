@@ -1,0 +1,154 @@
+* {margin:0;padding:0;border:0}
+html {
+	font-size:100.01%;
+	}
+body {
+	color: #000;
+	background-color: #fff;
+	overflow-x:hidden;
+	font-family: Tahoma,serif;
+	font-size: 62.5%;
+}
+a {
+	color:#0099CC;
+	text-decoration:underline
+}
+select, input {
+	border:1px solid #ccc;
+	width:100%
+}
+button {
+	display:block;
+	margin:20px auto;
+	padding:0 6px;
+	border: 1px solid #aaa
+}
+ul {
+	list-style-type:none
+}
+#header {
+	padding:10px;
+	color:#fff;
+	background-color:#6ba0d6;
+	font:bold 1.4em Tahoma,serif;
+}
+#menu_bar {
+	padding:0 10px;
+	background:url(/img/fonmenu.gif);
+	border-top:1px solid #999;
+	border-bottom:1px solid #999;
+	color:#000;
+	font:1.2em/2em Tahoma,serif;
+	height:25px
+}
+#menu_bar span {
+	font-size:1em;
+	color:#ccc
+}
+#breadcrumbs {
+	background:#ffc;
+	font-size:1.2em;
+	padding:20px;
+	border-bottom:1px dotted #ccc;
+	border-left:1px dotted #ccc;
+}
+#content {
+	font-size:1.4em;
+	padding:20px;
+	border-left:1px dotted #ccc
+}
+#footer {
+	padding:5px;
+	border-top:1px solid #FFF;
+	font:1em/1.6em Tahoma,serif;
+	background:#6BA0D6;
+	color:#fff
+}
+.wrapper {
+	width:expression(document.body.clientWidth<1001?'1000px':'auto')
+	min-width: 1000px;
+	width: 100%;
+}
+.outer {
+	width:expression(document.body.clientWidth<601?'600px':'auto')
+	min-width:600px;
+	font-size:1.1em;
+	border-left:190px solid #dfd;
+
+	border-right:0px solid #dfd;
+}
+.inner {
+	width: 100%;
+}
+.left {
+	width: 190px;
+	margin-left: -190px;
+	float: left;
+	position: relative;
+	z-index: 10;
+}
+.left #logout {
+	font-size:1.2em;
+}
+.left #left_menu {
+	padding:20px;
+	font:bold 1.4em/1.6em Tahoma,serif;
+}
+.right {
+	width: 0px;
+	margin-left:0px;
+	margin-right: -0px;
+	float: left;
+	position: relative;
+	z-index: 11;
+}
+.center {
+	float: left;
+	width: 100%;
+	z-index: 12;
+}
+ul#tree_layout {
+	display:table-row
+}
+ul#tree_layout li {
+	display:table-cell
+}
+	#tree {
+		-moz-user-select:none;
+		width:100%
+	}
+	#tree ul li {
+		display:block;
+		margin:4px;
+		padding:0 8px;
+		height:30px;
+		font:0.8em/2.4em Tahoma,serif;
+		border:1px solid #ccc;
+		cursor:move
+	}
+	#tree ul li a:hover {
+		cursor:pointer
+	}
+	#tree ul li#first {
+		border:0;
+		margin-top:-24px;
+		margin-bottom:6px;
+		font:0/0 Tahoma,serif;
+		height:3px;
+	}
+	#drop {
+		margin:-3px 0;
+		font:0/0 Tahoma,serif;
+		border:1px solid #000;
+		height:0px;
+		position:relative;
+		width:100%
+	}
+.clear { clear: both; }
+
+/* Mozilla code */
+.outer > .inner { border-bottom: 1px solid transparent; }
+.left { margin-right: 1px; }
+.right { margin-left: 1px; }
+.right p { padding-left: 10px; }
+.center { margin: 0 -1px 0 -2px; }

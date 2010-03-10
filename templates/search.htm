@@ -1,0 +1,45 @@
+<h1>{title}</h1>
+
+{content}
+
+<form action="/search">
+	<input type="text" name="q" value="{search_query}" style="width: 60%;">
+	<input 
+		type="submit" value="Найти" 
+		onclick="if (s.words.value=='') return false;"
+		>
+</form>
+<div style="font-size: 70%; color: #CCCCCC;">{stem}</div>
+<!-- BEGIN SearchResults -->
+<a href="{path}" style="padding-bottom: 0;">
+	<div style="font-size: 125%">{title}</div>
+</a>
+<div style="color: #CCCCCC; font-size: 70%;">{rel}</div>
+<!-- END SearchResults -->
+
+<br />
+
+<b>
+	<a 
+		href="#" 
+		onclick="javascript: 
+			if (document.getElementById('supres').style.display == 'none') { 
+				document.getElementById('supres').style.display = 'block'; 
+			} else { 
+				document.getElementById('supres').style.display = 'none'; } 
+			return false;"
+		>Посмотреть дополнительные результаты
+	</a>
+</b>
+
+<br />
+<br />
+
+<div id="supres" style="font-size: 80%; display: none">
+<!-- BEGIN SearchStemResults -->
+<a href="{path}">
+	<div style="font-size: 125%">{title}</div>
+</a>
+<div style="color: #CCCCCC; font-size: 70%">{rel}</div>
+<!-- END SearchStemResults -->
+</div>

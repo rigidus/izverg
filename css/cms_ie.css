@@ -1,0 +1,13 @@
+* ul#tree_layout {
+	width:100%;
+	display:inline;
+}
+* ul#tree_layout li {	vertical-align:top;
+	display:inline;
+	width:190px
+}
+* ul#tree_layout li#tree {	margin-left:5px;	width:expression((document.body.clientWidth-430)+'px')
+}
+* ul#tree_layout li#tree ul li {	padding-top:3px;	display:block;
+	width:auto
+}

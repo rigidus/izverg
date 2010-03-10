@@ -1,0 +1,362 @@
+<script>
+
+var mouse_x;
+var mouse_y;
+
+// Определение позиции элемента на странице
+function absPosition(obj) {
+      var x = y = 0;
+      while(obj) {
+            x += obj.offsetLeft;
+            y += obj.offsetTop;
+            obj = obj.offsetParent;
+      }
+      return {x:x, y:y};
+}
+
+// Определение позиции мыши
+function defPosition(event) {
+      var x = y = 0;
+      if (document.attachEvent != null) { // Internet Explorer & Opera
+            x = window.event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+            y = window.event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+      } else if (!document.attachEvent && document.addEventListener) { // Gecko
+            x = event.clientX + window.scrollX;
+            y = event.clientY + window.scrollY;
+      } else {
+            // Do nothing
+      }
+      return {x:x, y:y};
+}
+
+function is_inside(id, mouse_x, mouse_y) {
+	// Определяем координаты
+	click = document.getElementById(id);
+	click_x = absPosition(click).x;
+	click_y = absPosition(click).y;
+	click_w = click.clientWidth + click_x;
+	click_h = click.clientHeight + click_y;
+	// Проверяем, произошел клик внутри
+	if (
+		(mouse_x > click_x) && 
+		(mouse_y > click_y) &&
+		(mouse_x < click_w) &&
+		(mouse_y < click_h)
+	) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+
+var sel_mod_trap = false; 	// true если курсор мыши был внутри выпадающего меню выбора модуля
+var sel_tpl_trap = false; 	// true если курсор мыши был внутри выпадающего меню выбора шаблона
+
+document.onmousemove = function(event) {
+	
+	// Координаты мыши
+	var event = event || window.event; 
+	mouse_x = defPosition(event).x
+	mouse_y = defPosition(event).y
+	
+	// Если выведен список всплывающих модулей
+		if (document.getElementById('sel-mod').style.display == 'block') {
+			
+			if (is_inside('sel-mod', mouse_x, mouse_y)) {
+				if (!sel_mod_trap) {
+					// Курсор оказался внутри списка всплывающих модулей
+					// Надо установить ловушку
+					sel_mod_trap = true;
+				}
+			} else {
+				if (sel_mod_trap) {
+					// Курсор вышел, надо скрыть выпадающий список модулей
+					// (и возвратить значение по умолчанию)
+					document.getElementById('sel-mod').style.display = 'none';
+					document.getElementById('sel-mod-input').value = '{module}';
+					return;
+				}
+			}
+			
+		}
+		
+	// Если выведен список шаблонов
+		if (document.getElementById('sel-tpl').style.display == 'block') {
+			
+			if (is_inside('sel-tpl', mouse_x, mouse_y)) {
+				if (!sel_tpl_trap) {
+					// Курсор оказался внутри списка всплывающих шаблонов
+					// Надо установить ловушку
+					sel_tpl_trap = true;
+				}
+			} else {
+				if (sel_tpl_trap) {
+					// Курсор вышел, надо скрыть выпадающий список шаблонов
+					// (и возвратить значение по умолчанию)
+					document.getElementById('sel-tpl').style.display = 'none';
+					document.getElementById('sel-tpl-input').value = '{tpl}';
+					return;
+				}
+			}
+
+		}
+		
+}
+
+document.onclick = function(event) {
+
+	// Координаты мыши
+	var event = event || window.event; 
+	mouse_x = defPosition(event).x
+	mouse_y = defPosition(event).y
+	
+	// Проверяем, произошел клик в поле ввода подключаемого модуля
+	if (is_inside('sel-mod-input', mouse_x, mouse_y)) {
+		// Выводим список вспывающих модулей и выходим из функции
+		// (при этом заряжаем ловушку курсора мыши внутри выпадающего списка)
+		document.getElementById('sel-mod').style.display = 'block';
+		sel_mod_trap = false;
+		return;
+	}
+
+	// Если выведен список всплывающих модулей и клик произошел в нем
+	
+		if (document.getElementById('sel-mod').style.display == 'block') {
+
+			if (is_inside('sel-mod', mouse_x, mouse_y)) {
+				// Скрываем список всплывающих модулей и выходим из функции
+				// (onmouseover нам уже записал выбранный модуль в поле ввода)
+				document.getElementById('sel-mod').style.display = 'none';
+				return;
+			} else {
+				// Скрываем список всплывающих модулей и выходим из функции
+				// (не забыв очистить поле ввода)
+				document.getElementById('sel-mod').style.display = 'none';
+				document.getElementById('sel-mod-input').value = '{module}';
+				return;
+			}
+
+		}
+		
+
+	// Проверяем, произошел клик в поле ввода подключаемого шаблона
+	if (is_inside('sel-tpl-input', mouse_x, mouse_y)) {
+		// Выводим список вспывающих модулей и выходим из функции
+		// (при этом заряжаем ловушку курсора мыши внутри выпадающего списка)
+		document.getElementById('sel-tpl').style.display = 'block';
+		sel_tpl_trap = false;
+		return;
+	}
+	
+	// Если выведен список шаблонов и клик произошел в нем
+	
+		if (document.getElementById('sel-tpl').style.display == 'block') {
+
+			if (is_inside('sel-tpl', mouse_x, mouse_y)) {
+				// Скрываем список всплывающих модулей и выходим из функции
+				// (onmouseover нам уже записал выбранный модуль в поле ввода)
+				document.getElementById('sel-tpl').style.display = 'none';
+				return;
+			} else {
+				// Скрываем список всплывающих шаблонов и выходим из функции
+				// (не забыв очистить поле ввода)
+				document.getElementById('sel-tpl').style.display = 'none';
+				document.getElementById('sel-tpl-input').value = '{tpl}';
+				return;
+			}
+			
+		}
+}
+
+</script>
+
+
+<h2>{h_title}</h2> 
+
+<div style="background-color: #FFFFFF; display: none" id="div_versions">
+<form method="post">
+<table cellpadding="0" cellspacing="0" border="0" style="border: 1px solid red; padding: 10px">
+	<tr>
+		<td>
+			<div style="margin-left: 20px;">
+			<h4 style="margin: 0; padding: 0 0 10px 0;">Версии этой страницы: </h4>
+			</div>
+		</td>
+	</tr>
+	<!-- BEGIN MenuElt -->
+	<tr style="margin:0; padding: 0">
+		<td style="margin:0; padding: 0">
+			<div style="margin-left: {level}px; background-color: {bg}; border: 1px solid {brdr}; padding: 2px;">
+				<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td><input type="radio" name="draft" value="{ver}" {checked} ></td>
+					<td>&nbsp;&nbsp;</td>
+					<td>
+						<!-- BEGIN Controls -->
+						<a href="{key}" style="text-decoration: none;">
+							<img src="{gif}" border="0">
+						</a>
+						<!-- END Controls -->
+					</td>
+					<td>&nbsp;&nbsp;&nbsp;</td>
+					<td>
+						<!-- BEGIN hyperlink -->
+						<a href="{link}">
+							{title}
+						</a>
+						<!-- END hyperlink -->
+					</td>
+					<td>&nbsp;&nbsp;</td>
+				</tr>
+				</table>
+			</div>
+		</td>
+	</tr>
+	<!-- END MenuElt -->
+	<tr>
+		<td>
+			<div style="margin-left: 20px; padding: 13px 0 0 0;">
+			<input type="hidden" name="act" value="draft" />
+			<input type="submit" value="Установить текущую версию" style="border: 1px solid #AAAAAA; background-color: #DDDDDD" />		
+			</div>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+
+<form method="post">
+<table width="100%">
+<tr>
+	<td valign="top" width="1">Заголовок&nbsp;в&nbsp;меню:&nbsp;</td>
+	<td valign="top"><input type="text" name="title_menu" value="{title_menu}" style="width: 300px" /></td>
+</tr>
+<tr>
+	<td valign="top" width="1">Заголовок:&nbsp;страницы:&nbsp;</td>
+	<td valign="top"><input type="text" name="title" value="{title}" style="width: 300px" /></td>
+</tr>
+	<!-- BEGIN Link -->
+<tr>
+	<td valign="top" width="1">Ссылка:&nbsp;</td>
+	<td valign="top"><input type="text" name="key" value="{key}" style="width: 150px" /></td>
+</tr>
+	<!-- END Link -->
+<tr>
+	<td valign="top" width="1" style="display: none;">Порядок:&nbsp;</td>
+	<td valign="top" style="display: none;"><input type="text" name="order" value="{order}" style="width: 60px" /></td>
+</tr>
+<tr>
+	<td valign="top" width="1">Текст:&nbsp;</td>
+	<td valign="top"><!-- BEGIN text --><textarea name="text" rows="7" style="width: 100%" />{text}</textarea><!-- END text --></td>
+</tr>
+<!-- BEGIN annotation -->
+<tr>
+	<td valign="top" width="1">Аннотация:&nbsp;</td>
+	<td valign="top"><!-- BEGIN annotation --><textarea name="annotation" rows="5" style="width: 100%" />{annotation}</textarea><!-- END annotation --></td>
+</tr>
+<!-- END annotation -->
+<tr>
+	<td valign="top" width="1">Скрытая&nbsp;страница:&nbsp;</td>
+	<td valign="top"><input type="checkbox" name="hidden" value="1" {hidden_checked} /></td>
+</tr>
+<tr>
+	<td valign="top" width="1">Скрыть&nbsp;пункт&nbsp;меню:&nbsp;</td>
+	<td valign="top"><input type="checkbox" name="hidden_menu" value="1" {hidden_menu_checked} /></td>
+</tr>
+<tr>
+	<td valign="top" width="1">Подключаемый&nbsp;модуль:&nbsp;</td>
+	<td valign="top">
+		<div>
+			<input 
+				id="sel-mod-input"
+				type="text" 
+				name="module" 
+				value="{module}" 
+			/>
+		</div>
+		<div
+			id="sel-mod" 
+			style="position: absolute; 
+					background-color: #FFFFFF;
+					border: 1px solid #7f7f7f;
+					padding: 3px 10px 3px 10px;
+					display: none;
+					"
+		>
+			<!-- BEGIN SelectModules -->
+			<div
+				style="color: #0000FF; cursor: pointer;"
+				onmouseover="javascript: document.getElementById('sel-mod-input').value = '{ModuleName}';"
+				>{ModuleName}
+			</div>
+			<!-- END SelectModules -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td valign="top" width="1">Параметры&nbsp;модуля:&nbsp;</td>
+	<td valign="top"><input type="text" name="param" value="{param}" /></td>
+</tr>
+<tr>
+	<td valign="top" width="1">Шаблон модуля:&nbsp;</td>
+	<td valign="top">
+	
+		<div>
+			<input 
+				id="sel-tpl-input"
+				type="text" 
+				name="tpl" 
+				value="{tpl}" 
+			/>
+		</div>
+		<div
+			id="sel-tpl" 
+			style="position: absolute; 
+					background-color: #FFFFFF;
+					border: 1px solid #7f7f7f;
+					padding: 3px 10px 3px 10px;
+					display: none;
+					"
+		>
+			<!-- BEGIN SelectTpls -->
+			<div
+				style="color: #0000FF; cursor: pointer;"
+				onmouseover="javascript: document.getElementById('sel-tpl-input').value = '{TplName}';"
+				>{TplName}
+			</div>
+			<!-- END SelectTpls -->
+		</div>
+	
+	</td>
+</tr>
+<!-- BEGIN seopages -->
+<tr>
+	<td style="display: none;">&nbsp;</td>
+</tr>
+<tr>
+	<td valign="top" width="1" style="display: none;">Title:&nbsp;</td>
+	<td valign="top" style="display: none;"><input type="text" name="seo_title" value="{seo_title}" style="width: 100%" /></td>
+</tr>
+<tr>
+	<td valign="top" width="1" style="display: none;">Description:&nbsp;</td>
+	<td valign="top" style="display: none;"><input type="text" name="seo_description" value="{seo_description}" style="width: 100%" /></td>
+</tr>
+<tr>
+	<td valign="top" width="1" style="display: none;">Keywords:&nbsp;</td>
+	<td valign="top" style="display: none;"><input type="text" name="seo_keywords" value="{seo_keywords}" style="width: 100%" /></td>
+</tr>
+<!-- END seopages -->
+<tr>
+	<td valign="top" width="1"><input type="hidden" id="act" name="act" value="{act}" /></td>
+	<td valign="top"><input type="submit" value="Сохранить" /></td>
+</tr>
+</table>
+<input type="hidden" name="parent" value="{parent}" />
+</form>
+
+<script>
+if (document.getElementById('act').value == 'edit') {
+	document.getElementById('div_versions').style.display = 'block';
+}
+</script>

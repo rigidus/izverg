@@ -1,0 +1,107 @@
+<form method="post">
+
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+	<td valign="top">
+		<form method="post">
+			<input type="text" name="name" 
+				style="border: 1px solid #CCCCCC; width: 190px; margin-bottom: 3px; padding-left: 3px;" />
+			<input type="hidden" name="act" value="newalbum" />
+			<br />
+			<input type="submit" value="Создать новый альбом" 
+				style="border: 1px solid #CCCCCC; width: 190px; " />
+		</form><br /><br />
+		
+		<!-- BEGIN albums -->
+		<a href="{album-edit}" style="text-decoration: none">
+			<img src="/img/edit.gif" border="0" />
+		</a>
+		<a href="{album-del}" style="text-decoration: none">
+			<img src="/img/del.gif" border="0" />
+		</a>
+		<a href="{album-to}">
+			<img src="/img/folger.gif" border="0" style="position:relative; top: 3px;" />
+			<!-- BEGIN album-name -->
+				
+			<!-- END album-name -->
+		</a>
+		<br />
+		<!-- END albums -->
+	</td>
+	<td><img src="/img/spacer.gif" width="20" /></td>
+	<td style="border-left: 1px solid red"><img src="/img/spacer.gif" width="20" /></td>
+	<td valign="top">
+		<script>
+			function del_img(id) {
+				document.getElementById('del_img_id').value = id;
+				document.getElementById('del_img_form').submit();
+			}
+		</script>
+		<form method="post" id='del_img_form' style="display: none;">
+			<input type="hidden" name="act" value="delimage">
+			<input id="del_img_id" type="hidden" name="id" value="[id]">
+		</form>
+		<!-- BEGIN upload -->
+		<form method="post"  enctype="multipart/form-data">
+		<input type="hidden" name="act" value="imgupload" />
+		<input type="hidden" name="album" value="{album}" />
+		Загрузить изображение в этот альбом:<br /><input type="file" name="file" />
+		<input type="submit" value="Загрузить" />
+		<br />
+		<input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+		</form>
+		<!-- END upload -->
+		<form method="post">
+		<!-- BEGIN reorder-img -->
+		<input type="hidden" name="act" value="reorder-img" />
+		<input type="submit" value="Пересортировать" style="border: 1px solid #999999" />
+		<!-- END reorder-img -->
+		<br />
+		<br />
+			<!-- BEGIN imgs -->
+			<input type="button" onclick="javascript: del_img({id});" value="" style="background: url('/img/del.gif'); width: 19px; border: 1px solid #CCCCCC">
+			&nbsp;
+			<a style="text-decoration: none;" 
+			   href="javascript: void(document.getElementById('preview_div').style.display = 'block'); 
+								 void(document.getElementById('preview_img').src = '{file}'); 
+								 void(document.getElementById('preview_descr').style.display = 'block'); 
+								 void(document.getElementById('descr').value = '{descr}'); 
+								 void(document.getElementById('title').value = '{title}'); 
+								 void(document.getElementById('id').value = '{id}');">
+				<img src="/img/jpg.gif" border="0" style="position:relative; top: 3px; text-decoration:none;" />
+			</a>
+			<input type="text" name="order[{id}]" value="{order}" style="width: 30px; padding-left: 6px; border: 1px solid #999999" />
+			<a href="{album-to}/{album}/{id}">
+				{name}
+			</a>
+			<br />
+			<!-- END imgs -->
+		</form>
+	</td>
+	<td><img src="/img/spacer.gif" width="20" /></td>
+	<td style="border-left: 1px solid red"><img src="/img/spacer.gif" width="20" /></td>
+	<td valign="top">
+		<!-- BEGIN preview -->
+		<div id="preview_div" style="overflow: scroll; height: 300px; width: 300px; border: 1px solid #CCCCCC; display: block;">
+	 		<img src="{file}" border="0" id="preview_img" />
+	 	</div>
+ 		<div id="preview_descr" style="display: block;">
+ 			<br />
+	 		<form method="post">
+	 			Название:
+	 			<input id="title" type="text" name="title" value="{title}" style="width: 100%" />
+	 			<br />
+	 			Описание:
+	 			<textarea id="descr" name="descr" style="width: 100%; height: 100px;" />{descr}</textarea>
+	 			<input type="hidden" name="act" value="descr" />
+	 			<input type="hidden" name="id" value="{id}" id="id" />
+	 			<br />
+	 			<input type="submit" value="Изменить" style="border: 1px solid #AAAAAA" />
+	 		</form>
+ 		</div>
+		<!-- END preview -->
+	</td>
+</tr>
+</table>
+
+</form>

@@ -1,0 +1,112 @@
+<!-- BEGIN post -->
+<table class="Post">
+<tr class="TitleRow">
+	<td><a href="/postid/{link}">{title}</a></td>
+	<td align="right">{t}</td>
+</tr>
+<tr>
+	<td colspan="2" class="text" class="date">{text}</td>
+</tr>
+<tr>
+	<td colspan="2" align="right" class="comments">
+	<a href="/postid/{link}">
+		Комментарии: ({comments})
+	</a>
+	</td>
+</tr>
+</table>
+<div style="height: 15px"></div>
+<!-- END post -->
+
+<!-- BEGIN prev_next -->
+<table style="position: relative; top: -15px; font-size: 90%;">
+<tr>
+	<!-- BEGIN block_prev --><td><a href="/{prev}">предыдущие записи</a></td><!-- END block_prev -->
+	<!-- BEGIN block_record --><td align="center">&nbsp;<a href="/{num}">{num_page}</a>&nbsp;</td><!-- END block_record -->
+	<!-- BEGIN block_next --><td align="right"><a href="/{next}">следующие записи</a></td><!-- END block_next -->
+</tr>
+</table>
+<!-- END prev_next -->
+
+<!-- BEGIN stub -->
+<script>
+function parseIn(text,data) {
+	var rg;
+	var item;
+	for(item in data) {
+		rg = new RegExp('{'+item+'}','g');
+		text = text.replace(rg,data[item]);
+	}
+	return text;
+}
+</script>
+<div id="stub" style="display: none;">
+<form method="POST">
+<input type="hidden" name="act" value="add_comment" />
+<input type="hidden" name="parent" value="{parent}" />
+<table>
+<tr>
+	<td><textarea style="width: 100%" rows="5" name="text" /></textarea></td>
+</tr>
+<tr>
+	<td>
+		<input type="submit" value="Добавить комментарий" />
+		<input type="button" value="Отмена" onClick="document.getElementById('holder_{id}').innerHTML = '';" />
+	</td>
+</tr>
+</table>
+</form>
+</div>
+<!-- END stub -->
+
+
+<!-- BEGIN post_comment_top -->
+	<div style="text-align: center; width: 100%">
+	<a href="javascript:" style="font-size: 90%;"
+		onClick="document.getElementById('holder_top').innerHTML = parseIn(document.getElementById('stub').innerHTML, {'parent':0,'id':'top'});" >
+		добавить комментарий
+	</a>
+	</div>
+	<div id="holder_top"></div>
+	<br />
+<!-- END post_comment_top -->
+
+<!-- BEGIN post_comment_bottom -->
+	<div style="text-align: center; width: 100%">
+	<a href="javascript:" style="font-size: 90%;"
+		onClick="document.getElementById('holder_bottom').innerHTML = parseIn(document.getElementById('stub').innerHTML, {'parent':0,'id':'bottom'});" >
+		добавить комментарий
+	</a>
+	</div>
+	<div id="holder_bottom"></div>
+	<br />
+<!-- END post_comment_bottom -->
+
+
+<!-- BEGIN comment -->
+<table class="Comment" style="margin-left: {level}px">
+<tr class="TitleRow">
+	<td>{if_admin}{user}</td>
+	<td align="right" class="date">{t}</td>
+</tr>
+<tr>
+	<td colspan="2" class="text">{text}</td>
+</tr>
+<!-- BEGIN is_logged -->
+<tr>
+	<td colspan="2" class="add_comment">
+	<a href="javascript:" 
+		onClick="document.getElementById('holder_{id}').innerHTML = parseIn(document.getElementById('stub').innerHTML, {'parent':{id},'id':{id}});" >
+		Добавить
+	</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<div id="holder_{id}"></div>
+	</td>
+</tr>
+<!-- END is_logged -->
+</table>
+<!-- END comment -->
+

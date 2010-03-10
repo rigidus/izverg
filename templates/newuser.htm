@@ -1,0 +1,460 @@
+<form method="post" id="frm_register" style="margin: 0; padding: 0; display:inline;">
+<div style="border: 1px solid #CCCCCC; padding: 20px; background-color: #FFFFEE; width: 600px;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-size: 80%">
+
+	<tr>
+		<td>&nbsp;</td>
+		<td><span style="color: #FF0000; font-size: 150%">Обязательные поля</span></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				...помечены звездочкой. Все обязательные поля должны быть правильно заполнены
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+
+
+	<tr>
+		<td width="1" align="right">
+			<nobr>
+				<b style="font-size: 120%">
+					Логин<span style="color: #FF0000">&nbsp;*&nbsp;</span>:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td><input type="text" name="login" 
+			<!-- BEGIN validation_login -->
+			meta:validator="login" 
+			<!-- END validation_login -->
+			style="width:401px; padding: 0px 5px 0px 5px;"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				{validator_login}
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="1" align="right">
+			<nobr>
+				<b style="font-size: 120%">
+					Имя (псевдоним)<span style="color: #FF0000">&nbsp;*&nbsp;</span>:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td><input type="text" name="name" meta:validator="name" style="width:401px; padding: 0px 5px 0px 5px;"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				{validator_name}
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="1" align="right">
+			<nobr>
+				<b style="font-size: 120%">
+					Пароль<span style="color: #FF0000">&nbsp;*&nbsp;</span>:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td><input type="password" name="password" meta:validator="password" style="width:401px; padding: 0px 5px 0px 5px;"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				{validator_password}
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="1" align="right">
+			<nobr>
+				<b style="font-size: 120%">
+					Подтверждение пароля<span style="color: #FF0000">&nbsp;*&nbsp;</span>:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td><input type="password" name="password_confirm" meta:validator="password" style="width:401px; padding: 0px 5px 0px 5px;"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				{validator_password}
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="1" align="right">
+			<nobr>
+				<b style="font-size: 120%">
+					О себе:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td><textarea name="text" style="width:401px; padding: 0px 5px 0px 5px;; height: 130px;"></textarea></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				Когда и с какой целью вы родились? :) Чем занимаетесь (паркур, истфех, боевые искусства..) Или может быть только хотите начать заниматься?
+			</div>
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><span style="color: #FF0000; font-size: 150%">Контактная информация (желательно)</span></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				Если вы планируете посещать наши тренировки - укажите ваш мобильный телефон и/или номер ICQ чтобы с вами можно было связаться в случае изменений в расписании или иных форсмажорных обстоятельств
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	
+	
+	<tr>
+		<td width="1" align="right">
+			<nobr>
+				<b style="font-size: 120%">
+					Телефон:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td><input type="text" name="telephone" style="width:401px; padding: 0px 5px 0px 5px;"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				Лучше мобильный, можно несколько (через запятую)
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="1" align="right">
+			<nobr>
+				<b style="font-size: 120%">
+					ICQ:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td><input type="text" name="icq" style="width:401px; padding: 0px 5px 0px 5px;"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				Числовой ICQ uid
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="1" align="right">
+			<nobr>
+				<b style="font-size: 120%">
+					Сайт:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td><input type="text" name="site" style="width:401px; padding: 0px 5px 0px 5px;"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				Ссылка на ваш сайт или домашнюю страничку
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="1" align="right">
+			<nobr>
+				<b style="font-size: 120%">
+					Вконтакте:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td><input type="text" name="vkontakte" style="width:401px; padding: 0px 5px 0px 5px;"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				Ссылка на страничку "В контакте" (или "Однокласники")
+			</div>
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><span style="color: #FF0000; font-size: 150%">Другое (необязательные поля)</span></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				Дополнительная информация
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	
+	
+	<tr>
+		<td width="1" align="right" valign="top">
+			<nobr>
+				<b style="font-size: 120%">
+					Пол:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td valign="top">
+			<table border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center" width="25%">
+					<input type="radio" name="sex" value="male">
+				</td>
+				<td align="center" width="25%">
+					<input type="radio" name="sex" value="female">
+				</td>
+				<td align="center" width="25%">
+					<input type="radio" name="sex" value="unknown">
+				</td>
+				<td align="center">
+					<input type="radio" name="sex" value="default">
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" align="center" width="25%">
+					Мужской
+				</td>
+				<td valign="top" align="center" width="25%">
+					Женский
+				</td>
+				<td valign="top" align="center" width="25%">
+					<span style="line-height: 100%;">Затрудняюсь<br />ответить</span>
+				</td>
+				<td valign="top" align="center">
+					<span style="line-height: 100%;">Предпочитаю<br />умолчать</span>
+				</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="1" align="right">
+			<nobr>
+				<b style="font-size: 120%">
+					Возраст:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td><input type="text" name="age" meta:validator="age" style="width:401px; padding: 0px 5px 0px 5px;"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				{validator_age}
+			</div>
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<td width="1" align="right">
+			<nobr>
+				<b style="font-size: 120%">
+					Фамилия:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td><input type="text" name="f" style="width:401px; padding: 0px 5px 0px 5px;"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				Фамилия (необязательно)
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="1" align="right">
+			<nobr>
+				<b style="font-size: 120%">
+					Имя:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td><input type="text" name="i" style="width:401px; padding: 0px 5px 0px 5px;"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				Имя (необязательно)
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="1" align="right">
+			<nobr>
+				<b style="font-size: 120%">
+					Отчество:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td><input type="text" name="o" style="width:401px; padding: 0px 5px 0px 5px;"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				Отчество (необязательно)
+			</div>
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><span style="color: #FF0000; font-size: 150%">Важные данные (обязательные поля)</span></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				Проверьте правильность заполнения этих полей.
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	
+	
+	<tr>
+		<td width="1" align="right">
+			<nobr>
+				<b style="font-size: 120%">
+					Email<span style="color: #FF0000">&nbsp;*&nbsp;</span>:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td><input type="text" name="email" meta:validator="email" style="width:401px; padding: 0px 5px 0px 5px;"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				{validator_email}
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="1" align="right">
+			<nobr>
+				<b style="font-size: 120%">
+					Сaptcha<span style="color: #FF0000">&nbsp;*&nbsp;</span>:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td>
+			<img src="/kcaptcha" />
+			<br />
+			<input type="text" name="kcaptcha" meta:validator="captcha" style="padding: 0px 5px 0px 5px; width: 110px">
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				{validator_kcaptcha}
+			</div>
+		</td>
+	</tr>
+	
+
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				<input type="submit" name="{act}" value="{submit}" style="border: 1px solid #AAAAAA" />
+			</div>
+		</td>
+	</tr>
+	
+</table>
+</div>
+</form>

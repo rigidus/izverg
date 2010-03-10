@@ -1,0 +1,166 @@
+    html, body {
+        height:100%;
+        font-family: Verdana, Tahoma, Arial, sans-serif;
+        font-size: 90%;
+        margin:0; 
+        padding:0;
+		
+    }
+
+    A, A:hover {
+        font-family: Verdana, Tahoma, Arial, sans-serif;
+        text-decoration: underline; 
+    }
+
+    A:hover {
+        text-decoration: none; 
+    }
+
+    TD {
+        font-size: 80%;
+    }
+	
+	.top_sub_menu td a{
+		font-size:11px;
+		color: #FFFFFF;
+	}
+	.top_sub_menu td select{
+		width:204px;
+	}
+	
+	.left_menu{
+		font-size:11px;
+		color: #003446;
+	}
+	.left_menu a{
+		font-size:11px;
+		color: #003446;
+	}
+	
+	.top_menu a{
+		font-size:12px;
+		color: #FFFFFF;
+		font-weight:bold;
+	}
+	.top_menu b{
+		font-size:12px;
+		color: #003446;
+	}
+	
+	h2{
+		font-size:24px;
+		font-weight:normal;
+		color: #003446;
+		margin:0;
+	}
+	
+	.news_date{
+		font-size:11px;
+		color: #6B6B6B;
+	}
+	.news_text{
+		font-size:11px;
+		color: #000000;
+	}
+	.news_text a{
+		font-size:11px;
+		color: #1084BA;
+	}
+	.content_txt{
+		font-size:12px;
+		color: #000000;
+	}
+	.content_txt a{
+		font-size:11px;
+		color: #000000;
+		1font-weight:bold;
+	}
+	.content_bottom_txt{
+		background:#F45610;
+		font-size:11px;
+		color: #FFFFFF;
+		text-align:center;
+		width:154px;
+	}
+	.content_bottom_txt span{
+		font-size:18px;
+	}
+	.bottom{
+		font-size:11px;
+		color: #000000;
+	}
+	.bottom a{
+		font-size:11px;
+		color: #1084BA;
+	}
+	.white_text{
+		font-size:12px;
+		color: #FFFFFF;
+	}
+	.white_text a{
+		font-size:12px;
+		color: #FFFFFF;
+	}
+	
+	.flash_paging{
+		padding: 3px 10px 0px 0;
+		float:right;
+	}
+	.flash_paging a{
+		 width:18px; 
+		 height:19px;
+		 display:block;
+		 float:left;
+		 background: url(images/flash_bg.gif);
+		 font-size:14px;
+		 color: #FFFFFF;
+		 font-weight:bold;
+		 text-align:center;
+		 margin:0 0 0 2px;
+		 text-decoration: none; 
+	}
+	.flash_paging span{
+		 width:18px; 
+		 height:19px;
+		 display:block;
+		 float:left;
+		 background: url(images/flash_cur.gif);
+		 font-size:14px;
+		 color: #FFFFFF;
+		 font-weight:bold;
+		 text-align:center;
+		 margin:0 0 0 2px;
+	}
+	
+	.paging{
+		font-size:12px;
+		color: #000000;
+	}
+	.paging a{
+        border:1px solid white;
+        padding:0 5px 2px 5px;
+        font-size: 12px;
+        color:#000000;
+		background:#D3E5EB;
+    }
+    .paging span{
+        border:1px solid white;
+        padding:0 5px 2px 5px;
+        font-size: 12px;
+        color:#FFFFFF;
+        font-weight:bold;
+		background:#F45610;
+    }
+	
+		.table td{
+		padding: 5px;
+		vertical-align:top;
+		font-size:12px;
+		color: #000000;
+	}
+	.table td a{
+		font-size:11px;
+		color: #000000;
+		1font-weight:bold;
+	}
+	

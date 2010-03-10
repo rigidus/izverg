@@ -1,0 +1,251 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+p {
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+}
+.struct1td {
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	background-color: #E0E0E0;
+}
+.struct1td A, .struct2td A {
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+    text-decoration: none;
+}
+
+.tablemenu {
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #999999;
+	border-bottom-color: #999999;
+}
+.tdmenu2 {
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #5c8aba;
+}
+.menu1 {
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0px;
+}
+.menu1:hover {
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #FF6600;
+	text-decoration: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0px;
+}
+.razd {
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	color: #CCCCCC;
+}
+.tdmenu {
+	background-color: #6a9fd6;
+	background-image: url(/img/fon.jpg);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.copyright {
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+.tablefooter {
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #FFFFFF;
+	background-color: #6BA0D6;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FFFFFF;
+}
+.menu2 {
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.menu2:hover {
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: bo5ld;
+	color: #FF6600;
+	text-decoration: none;
+}
+.menu2on {
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #B0E92C;
+	text-decoration: none;
+}
+.menu2off {
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #999999;
+	text-decoration: none;
+}
+.tdhead {
+	text-decoration: none;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+}
+.struct2td {
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	background-color: #F3F3F3;
+}
+.head2 {
+	font-family: Tahoma, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FF6600;
+	text-decoration: none;
+}
+a {
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #0099CC;
+	text-decoration: underline;
+}
+.wide {
+width: 80%;
+}
+HR{
+	color: #E2E2E2;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.date {
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #999999;
+	text-decoration: none;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.ots { font-size: 11px; background-color: #999999; color:#ffffff; }
+.kk {font-size: 11px; background-color: #E9E9E9; }
+.nyt { font-size: 11px;  background-color: #B0E92C; color:#000000; border: 1px solid #999999;}
+.vier { font-size: 11px; background-color: white; color: #cccccc; }
+.tanaan {font-size: 11px;  background-color: #38B0DE;}
+.tanaanvalittuna {font-size: 11px; font-weight: BOLD; color:#000000; background-color:  #9EDBFC;}
+
+.txt {
+	text-decoration: none;
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.loginerror {
+	text-decoration: none;
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	color: red;
+	font-weight: bold;
+}
+
+.login1 {
+	text-decoration: none;
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #8CFF1A;
+}
+.loginhead {
+	font-family: Tahoma, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.tablelogin {
+	border: 1px solid #FFFFFF;
+	background-color: #666666;
+	background-image: url(/cms/system/images/enter_fon.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	padding: 20px;
+	
+}
+.logintxt {
+	text-decoration: none;
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.loginforgot {
+
+
+	text-decoration: none;
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #333333;
+}
+.login {
+	font-size: 12px;
+	background-color: #FE7112;
+	color:#FFFFFF;
+	border: 1px solid #FFFFFF;
+	padding: 2px;
+	font-weight: bold;
+}
+
+table.tables {font-family: Tahoma, sans-serif;font-size: 12px;font-weight: normal;color: #000000;}
+table.tables th{background-color:#6BA0D6; color:white; font-size:12px; font-family:tahoma} 
+table.tables td{background-color:#EBF3FA; color:#000000; font-size:12px; font-family:tahoma} 
+
+.border1px
+{
+	border: 1px solid black;
+}

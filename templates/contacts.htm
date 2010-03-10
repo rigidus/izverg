@@ -1,0 +1,128 @@
+<form method="post" id="frm_register" style="margin: 0; padding: 0; display:inline;">
+<div style="border: 1px solid #CCCCCC; padding: 20px; background-color: #FFFFEE; width: 600px;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-size: 80%">
+
+	<tr>
+		<td>&nbsp;</td>
+		<td><span style="color: #FF0000; font-size: 150%">Обязательные поля</span></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				...помечены звездочкой. Все обязательные поля должны быть правильно заполнены
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+
+
+	
+	
+	<tr>
+		<td width="1" align="right">
+			<nobr>
+				<b style="font-size: 120%">
+					Имя (псевдоним)<span style="color: #FF0000">&nbsp;*&nbsp;</span>:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td><input type="text" name="name" meta:validator="name" style="width:401px; padding: 0px 5px 0px 5px;"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				{validator_name}
+			</div>
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td width="1" align="right">
+			<nobr>
+				<b style="font-size: 120%">
+					Сообщение<span style="color: #FF0000">&nbsp;*&nbsp;</span>:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td><textarea name="message" meta:validator="filled" style="width:401px; padding: 0px 5px 0px 5px;; height: 130px;"></textarea></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				{validator_message}
+			</div>
+		</td>
+	</tr>
+
+	
+	<tr>
+		<td width="1" align="right">
+			<nobr>
+				<b style="font-size: 120%">
+					Email<span style="color: #FF0000">&nbsp;*&nbsp;</span>:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td><input type="text" name="email" meta:validator="email" style="width:401px; padding: 0px 5px 0px 5px;"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				{validator_email}
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="1" align="right">
+			<nobr>
+				<b style="font-size: 120%">
+					Сaptcha<span style="color: #FF0000">&nbsp;*&nbsp;</span>:
+					&nbsp;
+				</b>
+			</nobr>
+		</td>
+		<td>
+			<img src="/kcaptcha" />
+			<br />
+			<input type="text" name="kcaptcha" meta:validator="captcha" style="padding: 0px 5px 0px 5px; width: 110px">
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				{validator_kcaptcha}
+			</div>
+		</td>
+	</tr>
+	
+
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<div style="padding-bottom: 13px">
+				<input type="submit" name="send" value="Отправить" style="border: 1px solid #AAAAAA" />
+			</div>
+		</td>
+	</tr>
+	
+</table>
+</div>
+</form>

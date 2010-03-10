@@ -1,0 +1,72 @@
+html { height: 100%; padding: 0; margin: 0; }
+
+body { background-color: #555555; margin: 0px; font-family: Arial, Tahoma, Verdana; color: #FFFFFF; height: 100%; }
+
+table { width: 100%; border-collapse: collapse; margin: 0; }
+td { padding: 0; vertical-align: top; }
+
+div { width: 100%; }
+
+h1 { margin: 0; color: #000000; font-size: 22px; font-weight: 500; padding-bottom: 18px;}
+h2 { margin: 0; font-size: 18px; font-weight: 500; padding-bottom: 18px;}
+
+p { margin: 0; padding: 0; }
+a {color: #68777E; text-decoration: none;}
+a:hover {text-decoration: underline;}
+img { border: 0; }
+ul,ol {margin-top: 0; margin-bottom: 25px;}
+
+input {border: 1px solid #cccccc; color: #222222}
+textarea {border: 1px solid #cccccc; color: #222222}
+
+.LoginForm {padding: 5px 0px 5px 20px; color: #444444;}
+.LoginForm input {padding: 1px 4px 1px 4px; margin: 0px 0px 0px 0px; }
+
+
+.RightSpace {height: 377px;}
+.RightSpace div {width: 170px; height: 260px;}
+
+.Logo {position: absolute; width: 152px; height: 134px; top: 53px; left: 30px;}
+.Main {width: 100%; border-top: 1px solid #C9D0D9; border-right: 1px solid #C9D0D9;  border-bottom: 1px solid #C9D0D9; height: 550px; background: #ffffff;}
+
+.Top {height: 43px; background: #555555;}
+.TopMenu td {background: url('/img/star.gif') no-repeat 0% 13px; padding: 11px 30px 0 25px; font-size: 17px; width: 8%; white-space: nowrap; color: #ffffff;}
+.TopMenu a {color: #ffffff; text-decoration: underline}
+.TopMenu a:hover {text-decoration: none}
+.TopMenu .Last {background: none !important;}
+.TopMenu .Last div {width: 150px;} 
+.TopMenu .First {background: none !important; width: 60%; font-family: Courier New; font-size: 75%; line-height: 175%; white-space: nowrap}
+
+.Navi {position: absolute; width: 118px; height: 12px; left: 100%; margin-left: -145px; top: 14px;}
+.Navi img {margin-right: 24px;}
+
+.LeftMenu {width: 1%; padding: 25px 40px 80px 5px; font-size: 80%;}
+.LeftMenu td {padding-bottom: 10px; vertical-align: middle;}
+.LeftMenu img {margin: 0 15px 0 0;}
+.LeftMenu a {color: #68777E; text-decoration: none;}
+.LeftMenu a:hover {text-decoration: underline;}
+
+.Content {width: 99%; padding: 25px 70px 50px 0; font-size: 85%; line-height:  170%; color:#555555}
+.Content p {padding-bottom: 12px;}
+.Content table {margin-bottom: 10px;}
+.Content a {color: #46819C;}
+
+.Post {background-color: #f7f7f7; border: 1px dotted #dddddd;}
+.Post .TitleRow {background-color: #eeeeee;}
+.Post td {padding: 5px 20px 5px 20px; }
+.Post .date {font-size: 90%; color: #666666}
+.Post .text {font-size: 90%; color: #444444}
+.Post .comments {font-size: 80%; border-top: 1px dotted #dddddd}
+
+.Comment {background-color: #f7f7f7; border: 1px dotted #dddddd;}
+.Comment .TitleRow {background-color: #eeeeee;}
+.Comment td {padding: 2px 10px 2px 10px; }
+.Comment .date {font-size: 90%; color: #666666}
+.Comment .text {font-size: 90%; color: #444444}
+.Comment .add_comment {font-size: 90%; border-top: 1px dotted #dddddd}
+
+.SubTop {background-color: #dddddd; color: #555555; font-size: 80%}
+.SubTop .BreadCrumbs {padding: 5px 0px 5px 0px}
+.SubTop .Login {padding: 5px 0px 5px 25px}
+
+.AdSense {padding: 0px 10px 0px 10px;}

@@ -1,0 +1,82 @@
+<h2>{h_title}</h2>
+
+<form method="post">
+<table width="100%">
+<tr>
+	<td valign="top" width="1">Заголовок&nbsp;в&nbsp;меню:&nbsp;</td>
+	<td valign="top"><input type="text" name="title_menu" value="{title_menu}" style="width: 300px" disabled /></td>
+</tr>
+<tr>
+	<td valign="top" width="1">Заголовок:&nbsp;страницы:&nbsp;</td>
+	<td valign="top"><input type="text" name="title" value="{title}" style="width: 300px" disabled /></td>
+</tr>
+<tr>
+	<td valign="top" width="1">Ссылка:&nbsp;</td>
+	<td valign="top"><input type="text" name="key" value="{key}" style="width: 150px" disabled /></td>
+</tr>
+<tr>
+	<td valign="top" width="1" style="display: none;">Порядок:&nbsp;</td>
+	<td valign="top" style="display: none;"><input type="text" name="order" value="{order}" style="width: 60px" /></td>
+</tr>
+<tr>
+	<td valign="top" width="1" style="display: none;">Текст:&nbsp;</td>
+	<td valign="top" style="display: none;"><!-- BEGIN text --><textarea name="text" rows="7" style="width: 100%" />{text}</textarea><!-- END text --></td>
+</tr>
+<!-- BEGIN annotation -->
+<tr>
+	<td valign="top" width="1" style="display: none;">Аннотация:&nbsp;</td>
+	<td valign="top" style="display: none;"><!-- BEGIN annotation --><textarea name="annotation" rows="5" style="width: 100%" />{annotation}</textarea><!-- END annotation --></td>
+</tr>
+<!-- END annotation -->
+<tr>
+	<td valign="top" width="1">Скрытая&nbsp;страница:&nbsp;</td>
+	<td valign="top"><input type="checkbox" name="hidden" value="1" {hidden_checked} /></td>
+</tr>
+<tr>
+	<td valign="top" width="1">Скрыть&nbsp;пункт&nbsp;меню:&nbsp;</td>
+	<td valign="top"><input type="checkbox" name="hidden_menu" value="1" {hidden_menu_checked} /></td>
+</tr>
+<tr>
+	<td valign="top" width="1">Подключаемый&nbsp;модуль:&nbsp;</td>
+	<td valign="top"><input type="text" name="module" value="{module}" /></td>
+</tr>
+<tr>
+	<td valign="top" width="1">Параметры&nbsp;модуля:&nbsp;</td>
+	<td valign="top"><input type="text" name="param" value="{param}" /></td>
+</tr>
+<tr>
+	<td valign="top" width="1">Шаблон модуля:&nbsp;</td>
+	<td valign="top"><input type="text" name="tpl" value="{tpl}" /></td>
+</tr>
+<!-- BEGIN seopages -->
+<tr>
+	<td>&nbsp;</td>
+</tr>
+<tr>
+	<td valign="top" width="1">Title:&nbsp;</td>
+	<td valign="top"><input type="text" name="seo_title" value="{seo_title}" style="width: 100%" /></td>
+</tr>
+<tr>
+	<td valign="top" width="1">Description:&nbsp;</td>
+	<td valign="top"><input type="text" name="seo_description" value="{seo_description}"" style="width: 100%" /></td>
+</tr>
+<tr>
+	<td valign="top" width="1">Keywords:&nbsp;</td>
+	<td valign="top"><input type="text" name="seo_keywords" value="{seo_keywords}"" style="width: 100%" /></td>
+</tr>
+<!-- END seopages -->
+<tr>
+	<td valign="top" width="1"><input type="hidden" name="act" value="{act}" /></td>
+	<td valign="top"><input type="submit" value="Сохранить" /></td>
+</tr>
+<tr>
+	<td valign="top" width="1">Владелец:&nbsp;</td>
+	<td valign="top">{owner}</td>
+</tr>
+<tr>
+	<td valign="top" width="1">Изменен:&nbsp;</td>
+	<td valign="top">{changer} &nbsp;&nbsp;&nbsp;{t}</td>
+</tr>
+</table>
+<input type="hidden" name="parent" value="{parent}" />
+</form>
