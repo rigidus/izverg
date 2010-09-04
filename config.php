@@ -104,6 +104,7 @@ $aSpecialModules = array(
 
 $aSearchEngineHosts = array(
 'www.yandex.ru',
+'yandex.ru',
 'www.google',
 'www.rambler.ru',
 'go.mail.ru',
@@ -139,6 +140,8 @@ $aSearchEngineHosts = array(
 $aIniSearch = array(
 'www.google'=>'q',
 'www.yandex.ru'=>'text',
+'yandex.ru'=>'text',
+'yandex.ua'=>'text',
 'www.rambler.ru'=>'words',
 'images.yandex.ru'=>'text',
 'go.mail.ru'=>'q',
