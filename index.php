@@ -77,7 +77,7 @@ $bFlag404 = false;
 $nParent = 0;
 foreach ($aRequest as $nLevel=>$sKey) {
   $sql = "SELECT * FROM `".DB_PREFIX.DB_TBL_PAGES."`
-			WHERE ( (`parent`=$nParent) AND (`key`='$aRequest[$nLevel]') AND (`subversion` = 0) )";
+			WHERE ( (`parent`=$nParent) AND (`key`='".mysql_escape_string($aRequest[$nLevel])."') AND (`subversion` = 0) )";
   $sql = mysql_query($sql);
   if (false == $sql) my_die();
   $sql = mysql_fetch_assoc($sql);
